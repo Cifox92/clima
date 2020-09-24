@@ -21,7 +21,7 @@ function App() {
     const consultarAPI = async () => {
       if(consultar) {
         //KEY de la aplicación y la url con los valores que se pasan en formato query string
-        const appId = 'deb1cf72487aa6baac8035d8ba76e829'
+        const appId = process.env.REACT_APP_APPID
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${appId}`
 
         //esperamos la respuesta de la API y la guardamos en formato JSON
